@@ -690,6 +690,17 @@ p:last-child { margin-bottom: 0; }
 .service-icon {
   font-size: 3rem;
   line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon img {
+  max-width: 64px;
+  max-height: 64px;
+  width: auto;
+  height: auto;
+  display: block;
 }
 
 .service-content h2 {
