@@ -13,10 +13,11 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">
+      <a href="index.html" class="logo" aria-label="Security Systems & More Home">
         <img src="logo.png" alt="Security Systems & More" class="logo-img">
+        <span class="logo-text">SS&M</span>
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
         <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
         <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
@@ -30,82 +31,80 @@
   </header>
 
   <main>
-    <!-- Remote Support Section -->
-    <section class="hero-section" style="padding: 4rem 0; text-align: center;">
+    <!-- Page Header -->
+    <section class="hero-section" style="padding: 3rem 0;">
       <div class="container">
-        <img src="icon-monitoring.png" alt="Remote Support" style="max-width: 80px; margin-bottom: 1rem;">
-        <h1 class="section-heading" style="margin-bottom: 1rem;">Remote Support</h1>
-        <p style="max-width: 600px; margin: 0 auto 2rem; color: var(--gray-600);">Our technicians can connect remotely to diagnose and resolve issues with your security system. Download the appropriate tool below and contact us to start a support session.</p>
+        <h1 class="section-heading">Remote Support</h1>
+        <p class="hero-sub">Download the appropriate software below. Once downloaded, run the program and contact us — we'll connect to your device securely.</p>
       </div>
     </section>
 
-    <!-- TeamViewer Banner -->
-    <section class="alt-bg" style="padding: 3rem 0;">
+    <!-- TeamViewer Downloads -->
+    <section class="content-section alt-bg">
       <div class="container">
-        <div style="text-align: center; margin-bottom: 2rem;">
-          <img src="https://www.teamviewer.com/images/logo-teamviewer.svg" alt="TeamViewer" style="max-height: 50px; margin-bottom: 1rem;" onerror="this.style.display='none'">
-          <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Remote Assistance with TeamViewer</h2>
-          <p style="color: var(--gray-600);">Download the appropriate software below. Once downloaded, run the program and contact us — we'll connect to your device securely.</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto;">
-          <!-- Windows Quick Help -->
-          <a href="https://get.teamviewer.com/6hqxaj6" target="_blank" rel="noopener" class="download-card" style="display: block; background: white; border-radius: 8px; padding: 1.5rem; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-              <img src="https://cdn-icons-png.flaticon.com/512/888/888882.png" alt="Windows" style="width: 40px; height: 40px;">
-              <div>
-                <h3 style="color: var(--primary); margin: 0; font-size: 1.1rem;">Windows Quick Support</h3>
-                <p style="color: var(--gray-500); margin: 0; font-size: 0.875rem;">No install needed — runs directly</p>
+        <h2 class="section-heading">TeamViewer Downloads</h2>
+        <div style="max-width: 700px; margin: 0 auto;">
+          <p style="text-align: center; color: var(--gray-600); margin-bottom: 2rem;">Our technicians can connect remotely to diagnose and resolve issues with your security system. Download the appropriate tool for your computer.</p>
+          
+          <div style="display: grid; gap: 1.5rem;">
+            <!-- Windows Quick Help -->
+            <div style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <img src="https://cdn-icons-png.flaticon.com/512/888/888882.png" alt="Windows" style="width: 48px; height: 48px;">
+                <div>
+                  <h3 style="color: var(--primary); margin: 0 0 0.25rem;">Windows Quick Support</h3>
+                  <p style="color: var(--gray-500); margin: 0; font-size: 0.875rem;">No install needed — runs directly</p>
+                </div>
               </div>
+              <a href="https://get.teamviewer.com/6hqxaj6" target="_blank" rel="noopener" style="background: var(--primary); color: white; padding: 0.625rem 1.25rem; border-radius: 4px; text-decoration: none; font-weight: 600; white-space: nowrap;">Download →</a>
             </div>
-            <span style="display: inline-block; background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.875rem;">Download Quick Support →</span>
-          </a>
 
-          <!-- Windows Full Install -->
-          <a href="https://www.dropbox.com/s/adtjjlgmrj37220/TeamViewer_Setup_x64.exe?dl=1" target="_blank" rel="noopener" class="download-card" style="display: block; background: white; border-radius: 8px; padding: 1.5rem; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-              <img src="https://cdn-icons-png.flaticon.com/512/888/888882.png" alt="Windows" style="width: 40px; height: 40px;">
-              <div>
-                <h3 style="color: var(--primary); margin: 0; font-size: 1.1rem;">Windows Full Install</h3>
-                <p style="color: var(--gray-500); margin: 0; font-size: 0.875rem;">Install TeamViewer on your PC</p>
+            <!-- Windows Full Install -->
+            <div style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <img src="https://cdn-icons-png.flaticon.com/512/888/888882.png" alt="Windows" style="width: 48px; height: 48px;">
+                <div>
+                  <h3 style="color: var(--primary); margin: 0 0 0.25rem;">Windows Full Install</h3>
+                  <p style="color: var(--gray-500); margin: 0; font-size: 0.875rem;">Install TeamViewer on your PC</p>
+                </div>
               </div>
+              <a href="https://www.dropbox.com/s/adtjjlgmrj37220/TeamViewer_Setup_x64.exe?dl=1" target="_blank" rel="noopener" style="background: var(--primary); color: white; padding: 0.625rem 1.25rem; border-radius: 4px; text-decoration: none; font-weight: 600; white-space: nowrap;">Download →</a>
             </div>
-            <span style="display: inline-block; background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.875rem;">Download Installer →</span>
-          </a>
 
-          <!-- Mac Quick Help -->
-          <a href="https://www.dropbox.com/s/zhua5ia2dys7ski/TeamViewerQS.zip?dl=1" target="_blank" rel="noopener" class="download-card" style="display: block; background: white; border-radius: 8px; padding: 1.5rem; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-              <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Mac" style="width: 40px; height: 40px;">
-              <div>
-                <h3 style="color: var(--primary); margin: 0; font-size: 1.1rem;">Mac Quick Support</h3>
-                <p style="color: var(--gray-500); margin: 0; font-size: 0.875rem;">No install needed — runs directly</p>
+            <!-- Mac Quick Help -->
+            <div style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Mac" style="width: 48px; height: 48px;">
+                <div>
+                  <h3 style="color: var(--primary); margin: 0 0 0.25rem;">Mac Quick Support</h3>
+                  <p style="color: var(--gray-500); margin: 0; font-size: 0.875rem;">No install needed — runs directly</p>
+                </div>
               </div>
+              <a href="https://www.dropbox.com/s/zhua5ia2dys7ski/TeamViewerQS.zip?dl=1" target="_blank" rel="noopener" style="background: var(--primary); color: white; padding: 0.625rem 1.25rem; border-radius: 4px; text-decoration: none; font-weight: 600; white-space: nowrap;">Download →</a>
             </div>
-            <span style="display: inline-block; background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.875rem;">Download Quick Support →</span>
-          </a>
 
-          <!-- Mac Full Install -->
-          <a href="https://www.dropbox.com/s/k8sz50gh0b3q4fn/TeamViewer.dmg?dl=1" target="_blank" rel="noopener" class="download-card" style="display: block; background: white; border-radius: 8px; padding: 1.5rem; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-              <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Mac" style="width: 40px; height: 40px;">
-              <div>
-                <h3 style="color: var(--primary); margin: 0; font-size: 1.1rem;">Mac Full Install</h3>
-                <p style="color: var(--gray-500); margin: 0; font-size: 0.875rem;">Install TeamViewer on your Mac</p>
+            <!-- Mac Full Install -->
+            <div style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Mac" style="width: 48px; height: 48px;">
+                <div>
+                  <h3 style="color: var(--primary); margin: 0 0 0.25rem;">Mac Full Install</h3>
+                  <p style="color: var(--gray-500); margin: 0; font-size: 0.875rem;">Install TeamViewer on your Mac</p>
+                </div>
               </div>
+              <a href="https://www.dropbox.com/s/k8sz50gh0b3q4fn/TeamViewer.dmg?dl=1" target="_blank" rel="noopener" style="background: var(--primary); color: white; padding: 0.625rem 1.25rem; border-radius: 4px; text-decoration: none; font-weight: 600; white-space: nowrap;">Download →</a>
             </div>
-            <span style="display: inline-block; background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.875rem;">Download Installer →</span>
-          </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Additional Support Section -->
-    <section class="content-section" style="padding: 4rem 0;">
+    <!-- Contact Section -->
+    <section class="content-section">
       <div class="container">
-        <h2 class="section-heading" style="text-align: center; margin-bottom: 2rem;">Additional Support</h2>
         <div style="max-width: 600px; margin: 0 auto; text-align: center;">
-          <p style="color: var(--gray-600); margin-bottom: 2rem;">Need help with something else? Contact us directly and we'll get you to the right resource.</p>
+          <h2 class="section-heading">Need Additional Help?</h2>
+          <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Contact us directly and we'll get you to the right resource.</p>
           <a href="contact.html" class="btn btn-primary" style="display: inline-block; background: var(--primary); color: white; padding: 0.875rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600;">Contact Us</a>
         </div>
       </div>
@@ -116,7 +115,7 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <img src="logo.png" alt="Security Systems & More" class="logo-img">
+          <img src="logo.png" alt="Security Systems & More" class="footer-logo-img">
           <p>Professional security camera systems and monitoring for Florida homes and businesses.</p>
         </div>
         <div class="footer-links">
