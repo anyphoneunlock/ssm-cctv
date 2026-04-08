@@ -1110,3 +1110,30 @@ p:last-child { margin-bottom: 0; }
   height: 48px;
   width: auto;
 }
+
+/* --- Top Bar Social --- */
+.top-bar {
+  background: var(--gray-100);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.top-bar-inner {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-bar-social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.top-bar-social a {
+  color: var(--gray-600);
+  transition: color 0.2s;
+}
+
+.top-bar-social a:hover {
+  color: var(--primary);
+}
