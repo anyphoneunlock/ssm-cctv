@@ -699,8 +699,8 @@ p:last-child { margin-bottom: 0; }
 }
 
 .service-icon img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 150px;
+  max-height: 150px;
   width: auto;
   height: auto;
   display: block;
@@ -1090,8 +1090,8 @@ p:last-child { margin-bottom: 0; }
 }
 
 .process-icon img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 150px;
+  max-height: 150px;
   width: auto;
   height: auto;
   display: block;
