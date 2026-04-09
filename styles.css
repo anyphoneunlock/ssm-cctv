@@ -1081,8 +1081,8 @@ p:last-child { margin-bottom: 0; }
 
 /* --- Process Icon (centered, uniform size) --- */
 .process-icon {
-  width: 64px;
-  height: 64px;
+  width: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
