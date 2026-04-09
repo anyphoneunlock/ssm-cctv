@@ -368,5 +368,79 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pc
 })();
 </script>
 <!-- End Pidj Chat Code -->
+<!-- Chat Popup Notification -->
+<div id="chat-popup" class="chat-popup" style="display:none;">
+  <div class="chat-popup-content">
+    <span class="chat-popup-close" onclick="closeChatPopup()">&times;</span>
+    <div class="chat-popup-icon">💬</div>
+    <div class="chat-popup-text">
+      <strong>Chat with us!</strong>
+      <p>Have questions? We're here to help via SMS or chat.</p>
+    </div>
+  </div>
+</div>
+<style>
+.chat-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 9999;
+  animation: slideUp 0.5s ease-out forwards;
+  font-family: inherit;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.chat-popup-content {
+  background: #0055a4;
+  color: white;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 280px;
+  position: relative;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(0,0,0,0.25); }
+  50% { box-shadow: 0 4px 30px rgba(0,85,164,0.5); }
+}
+.chat-popup-icon { font-size: 1.75rem; flex-shrink: 0; }
+.chat-popup-text { font-size: 0.9rem; line-height: 1.4; }
+.chat-popup-text strong { display: block; margin-bottom: 0.25rem; }
+.chat-popup-text p { margin: 0; opacity: 0.9; }
+.chat-popup-close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #003366;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.chat-popup-close:hover { background: #002244; }
+</style>
+<script>
+function closeChatPopup() {
+  document.getElementById('chat-popup').style.display = 'none';
+  localStorage.setItem('chatPopupShown' , 'true');
+}
+window.addEventListener('load', function() {
+  if (!localStorage.getItem('chatPopupShown')) {
+    setTimeout(function() {
+      document.getElementById('chat-popup').style.display = 'block';
+    }, 3000);
+  }
+});
+</script>
 </body>
 </html>
