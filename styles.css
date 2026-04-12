@@ -762,7 +762,7 @@ p:last-child { margin-bottom: 0; }
 @media (min-width: 900px) {
   .contact-grid {
     grid-template-columns: 1.2fr 1fr;
-  }
+/*  }
 }
 
 .contact-form-wrapper h2,
@@ -924,7 +924,7 @@ p:last-child { margin-bottom: 0; }
 @media (min-width: 768px) {
   .footer-inner {
     grid-template-columns: 1.5fr 1fr 1fr;
-  }
+/*  }
 }
 
 .footer-logo {
@@ -1003,68 +1003,68 @@ p:last-child { margin-bottom: 0; }
     border-bottom: 1px solid var(--gray-200);
     box-shadow: var(--shadow-md);
     padding: 1rem;
-  }
+/*  }
 
   .main-nav.open {
     display: block;
-  }
+/*  }
 
   .main-nav .nav-list {
     flex-direction: column;
     align-items: stretch;
     gap: 0.25rem;
-  }
+/*  }
 
   .nav-link {
     display: block;
     padding: 0.75rem 1rem;
-  }
+/*  }
 
   .header-phone {
     display: none;
-  }
+/*  }
 
   .mobile-menu-btn {
     display: flex;
-  }
+/*  }
 
   .hero {
     padding: 4rem 0 3rem;
-  }
+/*  }
 
   .hero-ctas {
     flex-direction: column;
     align-items: flex-start;
-  }
+/*  }
 
   .hero-ctas .btn {
     width: 100%;
     justify-content: center;
-  }
+/*  }
 
   .problem-stats {
     grid-template-columns: 1fr;
-  }
+/*  }
 
   .service-block {
     grid-template-columns: 1fr;
-  }
+/*  }
 
   .service-block.reverse {
     direction: ltr;
-  }
+/*  }
 
   .service-icon {
     font-size: 2.5rem;
-  }
+/*  }
 
   .form-row {
     grid-template-columns: 1fr;
-  }
+/*  }
 
   .footer-inner {
     grid-template-columns: 1fr;
-  }
+/*  }
 }
 
 /* --- Utility --- */
@@ -1192,9 +1192,19 @@ p:last-child { margin-bottom: 0; }
   opacity: 1;
 }
 
-/* Mobile hero image */
+/* Mobile: solid background, no image */
+@media (max-width: 767px) { .hero-bg-image { display: none; } } /* backup */ @media (max-width: 767px) {
+/*  .hero-bg-image img {
+/*    content: url("hero-mobile.jpg");*/
+/*  }
+}
+
+/* Hide hero image on mobile - show solid background */
 @media (max-width: 767px) {
-  .hero-bg-image img {
-    content: url("hero-mobile.jpg");
+  .hero-bg-image {
+    display: none;
+  }
+  .hero {
+    background: var(--primary-dark);
   }
 }
