@@ -1196,18 +1196,6 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 767px) { .hero-bg-image { display: none; } } /* backup */ @media (max-width: 767px) {
 /*  .hero-bg-image img {
 /*    content: url("hero-mobile.jpg");*/
-/*  }
-}
-
-/* Hide hero image on mobile - show solid background */
-@media (max-width: 767px) {
-  .hero-bg-image {
-    display: none;
-  }
-  .hero {
-    background: var(--primary-dark);
-  }
-}
 
 /* Hide hero image on mobile - show solid background */
 @media (max-width: 767px) {
