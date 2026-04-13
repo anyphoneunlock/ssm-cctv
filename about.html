@@ -277,7 +277,8 @@ var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(pc
 
 
 <!-- Chat Button --><!-- Chat Button - triggers Broadvoice chat -->
-<div id="chat-popup" onclick="document.getElementById("chat-widget-btn").click()" style="
+<!-- Chat Button --><!-- Chat Button - triggers Broadvoice chat -->
+<div id="chat-popup" onclick="try{document.getElementById("chat-widget-btn").click();}catch(e){try{document.querySelector("[class*=bubble]").click();}catch(e2){try{document.querySelector("iframe[src*=broadvoice]").click();}catch(e3){}}}}" style="
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -292,9 +293,8 @@ var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(pc
   justify-content: center;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
-">
-  <div style="font-size: 1.75rem;">💬</div>
-</div>
+  font-size: 1.75rem;
+">💬</div>
 
 <style>
 .chat-popup {
