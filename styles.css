@@ -539,6 +539,12 @@ p:last-child { margin-bottom: 0; }
   gap: 2rem;
 }
 
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- Gallery Grid --- */
 .gallery-grid {
   display: grid;
