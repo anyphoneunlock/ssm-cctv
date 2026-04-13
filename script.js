@@ -48,7 +48,14 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
 
       const formData = new FormData(contactForm);
-      const required = ['first-name', 'email', 'subject', 'message'];
+      // Video request form has different fields
+    var required;
+    if (formId === 'contact-form') {
+      required = ['first-name', 'email', 'subject', 'message'];
+    } else {
+      // video-request form uses: name, email, camera_number, date, time, message
+      required = ['name', 'email', 'camera_number', 'date', 'time', 'message'];
+    }
 
       // Clear previous errors
       contactForm.querySelectorAll('.form-error').forEach(function(el) {
