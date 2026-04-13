@@ -488,11 +488,21 @@ p:last-child { margin-bottom: 0; }
 }
 
 .diff-grid {
-  @media (max-width: 600px) { grid-template-columns: 1fr; }
-  @media (max-width: 1024px) { grid-template-columns: repeat(2, 1fr); }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .diff-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .diff-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .diff-card {
@@ -524,7 +534,6 @@ p:last-child { margin-bottom: 0; }
 }
 
 .testimonials-grid {
-  @media (max-width: 768px) { grid-template-columns: 1fr; }
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
