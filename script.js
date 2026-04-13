@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
 
       const formData = new FormData(contactForm);
-      const required = ['first-name', 'last-name', 'email', 'subject', 'message'];
+      const required = ['first-name', 'email', 'subject', 'message'];
 
       // Clear previous errors
       contactForm.querySelectorAll('.form-error').forEach(function(el) {
