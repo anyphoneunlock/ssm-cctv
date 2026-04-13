@@ -122,44 +122,43 @@
 
           <!-- Contact Form -->
           <div class="contact-form-wrapper">
-            <h2>Video Request</h2>
-            <p>Fill out the form below and we'll get back to you within one business day. For urgent service issues, call us directly.</p>
-            <form class="contact-form" id="contact-form" novalidate action="https://formspree.io/f/mojyqkdr" method="POST" >
+<form class="contact-form" id="contact-form" action="https://formspree.io/f/mojyqkdr" method="POST" novalidate>
+              <div class="form-group">
+                <label for="name">First & Last Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="John Smith">
+              </div>
               <div class="form-row">
                 <div class="form-group">
-                  <label for="first-name">First & Last Name <span class="required">*</span></label>
-                  <input type="text" id="first-name" name="first-name" required autocomplete="given-name" placeholder="John">
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" required autocomplete="email" placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(561) 555-1234">
                 </div>
               </div>
               <div class="form-group">
-                <label for="email">Email Address <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required autocomplete="email" placeholder="john@example.com">
+                <label for="camera_number">Camera # <span class="required">*</span></label>
+                <input type="text" id="camera_number" name="camera_number" required placeholder="e.g. CAM-01">
+              </div>
+              <p style="font-size: 0.85rem; color: #666; margin-top: -0.5rem;">Please write the correct Camera #</p>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="date">Date of Recording <span class="required">*</span></label>
+                  <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                  <label for="time">Time of Recording <span class="required">*</span></label>
+                  <input type="time" id="time" name="time" required>
+                </div>
               </div>
               <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(561) 555-1234">
-              </div>
-              <div class="form-group">
-                <label for="subject">What can we help you with? <span class="required">*</span></label>
-                <select id="subject" name="subject" required>
-                  <option value="">Select an option...</option>
-                  <option value="video-request" selected>Video Request</option>
-                  <option value="equipment">Equipment Recommendation</option>
-                  <option value="service">Service Request</option>
-                  <option value="monitoring">CCTV Monitoring</option>
-                  <option value="quote">Request a Quote</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="message">Message <span class="required">*</span></label>
-                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your property and what you're looking for..."></textarea>
+                <label for="message">Describe the footage you are looking for <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="5" required placeholder="Tell us what you are looking for..."></textarea>
               </div>
               <div id="form-status"></div>
-              <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+              <button type="submit" class="btn btn-primary btn-lg">Submit Video Request</button>
             </form>
-
-            <div class="contact-info-card quick-actions" style="margin-top: 1.5rem;">
               <h3>Quick Actions</h3>
               <a href="tel:+15616932624" class="btn btn-primary btn-block">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
