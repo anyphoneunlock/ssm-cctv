@@ -1278,3 +1278,14 @@ p:last-child { margin-bottom: 0; }
   height: 32px;
   fill: white;
 }
+
+/* Hide Broadvoice widget button completely */
+#chat-widget-btn, 
+#chat-widget-btn iframe, 
+#chat-widget-btn > div,
+[class*="bubble-"],
+[class*="broadvoice"] {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  display: none !important;
+}

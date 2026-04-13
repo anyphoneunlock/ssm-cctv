@@ -287,17 +287,26 @@ var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(pc
 
 
 
-<!-- Chat Popup Notification -->
-<div id="chat-popup" class="chat-popup" style="display:none;">
-  <div class="chat-popup-content">
-    <span class="chat-popup-close" onclick="closeChatPopup()">&times;</span>
-    <div class="chat-popup-icon">💬</div>
-    <div class="chat-popup-text">
-      <strong>Chat with us!</strong>
-      <p>Have questions? We're here to help via SMS or chat.</p>
-    </div>
-  </div>
+<!-- Chat Button --><!-- Chat Button - triggers Broadvoice chat -->
+<div id="chat-popup" onclick="document.getElementById("chat-widget-btn").click()" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #0055a4, #003366);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+">
+  <div style="font-size: 1.75rem;">💬</div>
 </div>
+
 <style>
 .chat-popup {
   position: fixed;
