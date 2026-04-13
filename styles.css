@@ -1244,3 +1244,36 @@ p:last-child { margin-bottom: 0; }
   height: 32px;
   fill: white;
 }
+
+/* Hide Broadvoice native button, show custom mask */
+#chat-widget-btn {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+#chat-custom-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #0055a4, #003366);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+#chat-custom-btn:hover {
+  transform: scale(1.1);
+}
+
+#chat-custom-btn svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}

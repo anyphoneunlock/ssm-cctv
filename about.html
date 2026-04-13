@@ -259,6 +259,23 @@
 
   <script src="script.js"></script>
 
+<!-- Start Pidj Chat Code -->
+<script type="text/javascript">
+(function() {
+var pc = document.createElement("script"); pc.type = "text/javascript"; pc.async = true;
+pc.src = "https://bubble.broadvoice.com/chat/button/pc:20e048a5-22ce-5022-b786-1fc5341ee40c:aDxza.js?t=" + Date.now() + "";
+var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(pc, s);
+})();
+</script>
+<!-- End Pidj Chat Code -->
+
+<!-- Custom Chat Button - masks Broadvoice button -->
+<div id="chat-custom-btn" onclick="document.getElementById("chat-widget-btn").click()">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/></svg>
+</div>
+
+
+
 <!-- Chat Popup Notification -->
 <div id="chat-popup" class="chat-popup" style="display:none;">
   <div class="chat-popup-content">
