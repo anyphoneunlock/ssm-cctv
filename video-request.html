@@ -145,15 +145,15 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="date">Date of Recording <span class="required">*</span></label>
-                  <input type="date" id="date" name="date" required placeholder="MM/DD/YYYY">
+                  <input type="text" id="date" name="date" required placeholder="MM/DD/YYYY" maxlength="10">
                 </div>
                 <div class="form-group">
                   <label for="start_time">Start Time <span class="required">*</span></label>
-                  <input type="time" id="start_time" name="start_time" required>
+                  <input type="text" id="start_time" name="start_time" required placeholder="HH:MM AM/PM" maxlength="8">
                 </div>
               <div class="form-group">
                 <label for="end_time">End Time <span class="required">*</span></label>
-                <input type="time" id="end_time" name="end_time" required>
+                <input type="text" id="end_time" name="end_time" required placeholder="HH:MM AM/PM" maxlength="8">
               </div>
               <div class="form-group">
                 <label for="message">Describe the footage you are looking for <span class="required">*</span></label>
@@ -494,5 +494,29 @@ form.addEventListener("submit", async (e) => {
   }).catch(error => {
     status.innerHTML = "<p style='color: red;'>Something went wrong. Please try again.</p>";
   });
+});
+</script>
+
+<script>
+// Date formatting - MM/DD/YYYY
+document.getElementById('date').addEventListener('input', function(e) {
+  var value = e.target.value.replace(/[^\d]/g, '');
+  if (value.length >= 2) value = value.slice(0,2) + '/' + value.slice(2);
+  if (value.length >= 5) value = value.slice(0,5) + '/' + value.slice(5,9);
+  e.target.value = value;
+});
+
+// Time formatting - HH:MM AM/PM with auto-uppercase and arrow key support
+document.getElementById('start_time').addEventListener('input', function(e) {
+  var value = e.target.value.toUpperCase().replace(/[^0-9AAMP ]/g, '');
+  if (value.length >= 2) value = value.slice(0,2) + ':' + value.slice(2);
+  if (value.length >= 5) value = value.slice(0,5) + ' ' + value.slice(5,7);
+  e.target.value = value;
+});
+document.getElementById('end_time').addEventListener('input', function(e) {
+  var value = e.target.value.toUpperCase().replace(/[^0-9AAMP ]/g, '');
+  if (value.length >= 2) value = value.slice(0,2) + ':' + value.slice(2);
+  if (value.length >= 5) value = value.slice(0,5) + ' ' + value.slice(5,7);
+  e.target.value = value;
 });
 </script>
